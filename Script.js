@@ -17,4 +17,11 @@ function diminuisciGiocatori(){
 function gestisciAvanti() {
     document.getElementById('finestra-menu').classList.add('nascosto');
     document.getElementById('finestra-nomi').classList.remove('nascosto');
+    var n = document.getElementById('conteggio-giocatori').innerText;
+    creacaselle(n);
+}
+function creacaselle(n){
+    for(let i=0;i<n;i++){
+        document.getElementById('listagiocatori').innerHTML=document.getElementById('listagiocatori').innerHTML + "<input type='text' name='giocatore1'></input>";
+    }
 }

@@ -78,7 +78,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     margin-bottom: 20px;
     background: rgba(255, 255, 255, 0.7);
     padding: 20px;
@@ -139,5 +139,28 @@ h1 {
 }
 .nascosto{
     display: none !important;
+}
+.titolonomi {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+}
+.spaziobottoni{
+    gap: 10px;
+    display: flex;
+}
+.bottoneavvio{
+    margin-top: 20px;
+    background: black;
+    color: orange;
+    width: 220px;
+    padding: 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 0px #333;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
 }
 
