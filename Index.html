@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OCAPLAY - Menu Selezione</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+    <div id="finestra-menu">
+       
+        <div class="sole"></div>
+       
+        <div class="barrasuperiore">
+            <div class="bottonechiudi" onclick="location.reload()">✕</div>
+        </div>
 
-</body>
-</html>
+        <div class="contenutomenu">
+            <h1><span class="titolonero">Oca</span><span class="titoloarancio">Play</span></h1>
+           
+            <div class="scatolacontenitore">
+                <div class="testogiocatori">QUANTI GIOCATORI?</div>
+                <div class="selettoregiocatori">
+                    <div class="bottonefreccia" onclick="cambiaGiocatori(-1)">−</div>
+                    <div class="boxnumero" id="conteggio-giocatori">2</div>
+                    <div class="bottonefreccia" onclick="cambiaGiocatori(1)">+</div>
+                </div>
+            </div>
+            <button class="tastoavvio">Avanti</button>
+          </div>
+      </div>
+  
+      <script src="Script.js"></script>
+  </body>
+  </html>
