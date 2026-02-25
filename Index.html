@@ -22,13 +22,29 @@
             <div class="scatolacontenitore">
                 <div class="testogiocatori">QUANTI GIOCATORI?</div>
                 <div class="selettoregiocatori">
-                    <div class="bottonefreccia" onclick="cambiaGiocatori(-1)">−</div>
+                    <div class="bottonefreccia" onclick="diminuisciGiocatori()">-</div>
                     <div class="boxnumero" id="conteggio-giocatori">2</div>
-                    <div class="bottonefreccia" onclick="cambiaGiocatori(1)">+</div>
+                    <div class="bottonefreccia" onclick="aumentaGiocatori()">+</div>
                 </div>
             </div>
-            <button class="tastoavvio">Avanti</button>
+            <button class="tastoavvio" onclick="gestisciAvanti()">Avanti</button>
           </div>
+      </div>
+      <div id="finestra-nomi" class="nascosto">
+
+        <div class="sole"></div>
+
+        <div class="barrasuperiore">
+            <div class="bottonechiudi" onclick="location.reload()">✕</div>
+        </div>
+
+        <div class="contenutomenu">
+            <div class="scatolacontenitore">
+                <div class="testogiocatori">Inserisci Nomi Giocatori</div>
+            </div>
+        </div>
+
+
       </div>
   
       <script src="Script.js"></script>
