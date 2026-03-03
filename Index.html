@@ -13,7 +13,7 @@
         <div class="sole"></div>
        
         <div class="barrasuperiore">
-            <div class="bottonechiudi">✕</div>
+            <div class="bottonechiudi" onclick="Chiudifinestra()">✕</div>
         </div>
 
         <div class="contenutomenu">
@@ -30,21 +30,25 @@
             <button class="tastoavvio" onclick="gestisciAvanti()">Avanti</button>
           </div>
       </div>
+
+
       <div id="finestra-nomi" class="nascosto">
         
         <div class="sole"></div>
         
         <div class="barrasuperiore">
-            <div class="bottonechiudi">✕</div>
+            <div class="bottonechiudi" onclick="Chiudifinestra()">✕</div>
         </div>
 
         <div class="contenutomenu">
+            <h1><span class="titolonero">No</span><span class="titoloarancio">mi</span></h1>
+
             <div class="scatolacontenitore" id="listagiocatori">
                 <div class="titolonomi">Inserisci Nomi Giocatori</div>
                 <div id="listainput"></div>
             </div>
             <div class="spaziobottoni">
-                <button class="bottoneavvio">INDIETRO</button>
+                <button class="bottoneavvio" onclick="tornaindietro()">INDIETRO</button>
                 <button class="bottoneavvio">GIOCA!</button>
 
             </div>

@@ -44,7 +44,6 @@ body {
 .bottonechiudi{
     display: flex;
     color: black;
-    font-family: 'Brush Script MT';
     width: 40px;
     height: 40px;
     border-radius: 50px;
@@ -163,4 +162,19 @@ h1 {
     font-size: 1.2rem;
     border: none;
 }
-
+#finestra-nomi{
+    background: #a3d2ff;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    flex-direction:column;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#listainput{
+    flex-direction:column;
+    display: flex;
+    gap: 20px;
+}
