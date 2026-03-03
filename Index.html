@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OCAPLAY - Menu Selezione</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div id="finestra-menu">
+       
+        <div class="sole"></div>
+       
+        <div class="barrasuperiore">
+            <div class="bottonechiudi">✕</div>
+        </div>
+
+        <div class="contenutomenu">
+            <h1><span class="titolonero">Oca</span><span class="titoloarancio">Play</span></h1>
+           
+            <div class="scatolacontenitore">
+                <div class="testogiocatori">QUANTI GIOCATORI?</div>
+                <div class="selettoregiocatori">
+                    <div class="bottonefreccia" onclick="diminuisciGiocatori()">-</div>
+                    <div class="boxnumero" id="conteggio-giocatori">2</div>
+                    <div class="bottonefreccia" onclick="aumentaGiocatori()">+</div>
+                </div>
+            </div>
+            <button class="tastoavvio" onclick="gestisciAvanti()">Avanti</button>
+          </div>
+      </div>
+      <div id="finestra-nomi" class="nascosto">
+        
+        <div class="sole"></div>
+        
+        <div class="barrasuperiore">
+            <div class="bottonechiudi">✕</div>
+        </div>
+
+        <div class="contenutomenu">
+            <div class="scatolacontenitore" id="listagiocatori">
+                <div class="titolonomi">Inserisci Nomi Giocatori</div>
+                <div id="listainput"></div>
+            </div>
+            <div class="spaziobottoni">
+                <button class="bottoneavvio">INDIETRO</button>
+                <button class="bottoneavvio">GIOCA!</button>
+
+            </div>
+        </div>
+    </div>
+    
+    </div id= "schermo-gioco">
+        <div class = "contenitore-gioco">
+            <header style="text-align: center; height: 30px;">
+                <h1 style="font-size: 1.2rem; margin: 0;"><span class="titolonero">Oca</span><span class="titoloarancio">Play</span></h1>
+            </header>
+            <main class="area-mappa">
+                <div id="campo-gioco"></div>
+            </main>
+            
+        </div>
+
+
+  
+      <script src="Script.js"></script>
+  </body>
+  </html>
