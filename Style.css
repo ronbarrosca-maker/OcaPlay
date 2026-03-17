@@ -200,5 +200,17 @@ h1 {
     box-sizing: border-box;
     
 }
-
-
+.area-mappa{
+    flex-grow: 1;
+    border:3px solid #333;
+    margin: 5px 0;
+    position: relative;
+    background-color: #fdf0d5;
+    border-radius: 12px;
+    overflow: hidden;
+}
+#campo-gioco{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}

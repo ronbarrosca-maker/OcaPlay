@@ -25,3 +25,11 @@ function creacaselle(n){
         document.getElementById('listagiocatori').innerHTML=document.getElementById('listagiocatori').innerHTML + "<input type='text' name='giocatore1'></input>";
     }
 }
+function Chiudifinestra(){
+    window.close();
+}
+function tornaindietro(){
+    document.getElementById('listainput').innerHTML="";   
+    document.getElementById('finestra-menu').classList.remove('nascosto');
+    document.getElementById('finestra-nomi').classList.add('nascosto');
+}
