@@ -178,3 +178,12 @@ h1 {
     display: flex;
     gap: 20px;
 }
+.contenitore-gioco{
+    position: relative; 
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    padding: 10px; 
+    box-sizing: border-box; 
+}
