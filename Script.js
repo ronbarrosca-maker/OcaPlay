@@ -33,3 +33,10 @@ function tornaindietro(){
     document.getElementById('finestra-menu').classList.remove('nascosto');
     document.getElementById('finestra-nomi').classList.add('nascosto');
 }
+function GiocaAvanti(){
+    document.getElementById('finestra-gioco').classList.remove('nascosto');
+    document.getElementById('finestra-nomi').classList.add('nascosto');
+}
+function apriImp(){
+    document.getElementById('impostazioni').classList.remove('nascosto');
+}

@@ -41,7 +41,7 @@ body {
     padding: 5px;
     z-index: 20;
 }
-.bottonechiudi{
+.bottoni{
     display: flex;
     color: black;
     width: 40px;
@@ -187,3 +187,152 @@ h1 {
     padding: 10px; 
     box-sizing: border-box; 
 }
+.mappa{
+    flex-grow: 1;
+    border: 3px solid #333;
+    margin: 5px 0; 
+    position: relative;
+    background-color:rgba(255, 255, 255, 0.7) ;
+    border-radius: 12px;
+    overflow: hidden;
+}
+#campo-tabellone{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 0px;
+   
+}
+.parent div {
+    border: 2px solid black;
+}
+.div6 {
+    grid-column-start: 5;
+    grid-row-start: 2;
+}
+
+.div7 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+.div8 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.div9 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.div10 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.div16 {
+    grid-column-start: 5;
+    grid-row-start: 4;
+}
+
+.div17 {
+    grid-column-start: 4;
+    grid-row-start: 4;
+}
+
+.div18 {
+    grid-column-start: 3;
+    grid-row-start: 4;
+}
+
+.div19 {
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
+
+.div20 {
+    grid-column-start: 1;
+    grid-row-start: 4;
+}
+
+.div26 {
+    grid-column-start: 5;
+    grid-row-start: 6;
+}
+
+.div27 {
+    grid-column-start: 4;
+    grid-row-start: 6;
+}
+
+.div28 {
+    grid-column-start: 3;
+    grid-row-start: 6;
+}
+
+.div29 {
+    grid-column-start: 2;
+    grid-row-start: 6;
+}
+
+.div30 {
+    grid-column-start: 1;
+    grid-row-start: 6;
+}
+
+.div36 {
+    grid-column-start: 5;
+    grid-row-start: 8;
+}
+
+.div37 {
+    grid-column-start: 4;
+    grid-row-start: 8;
+}
+
+.div38 {
+    grid-column-start: 3;
+    grid-row-start: 8;
+}
+
+.div39 {
+    grid-column-start: 2;
+    grid-row-start: 8;
+}
+
+.div40 {
+    grid-column-start: 1;
+    grid-row-start: 8;
+}
+
+.div46 {
+    grid-column-start: 5;
+    grid-row-start: 10;
+}
+
+.div47 {
+    grid-column-start: 4;
+    grid-row-start: 10;
+}
+
+.div48 {
+    grid-column-start: 3;
+    grid-row-start: 10;
+}
+
+.div49 {
+    grid-column-start: 2;
+    grid-row-start: 10;
+}
+
+.div50 {
+    grid-column-start: 1;
+    grid-row-start: 10;
+}
+        

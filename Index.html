@@ -13,7 +13,8 @@
         <div class="sole"></div>
        
         <div class="barrasuperiore">
-            <div class="bottonechiudi" onclick="Chiudifinestra()">✕</div>
+            <div class="bottoni" onclick="apriImp()"><img src="c:\Users\4ainfgr8\Downloads\icons8-impostazioni-24.png" alt="Impostazioni"></div>
+            <div class="bottoni" onclick="Chiudifinestra()">✕</div>
         </div>
 
         <div class="contenutomenu">
@@ -30,6 +31,10 @@
             <button class="tastoavvio" onclick="gestisciAvanti()">Avanti</button>
           </div>
       </div>
+      
+      <div id="impostazioni" class="nascosto">
+
+      </div>
 
 
       <div id="finestra-nomi" class="nascosto">
@@ -37,11 +42,12 @@
         <div class="sole"></div>
         
         <div class="barrasuperiore">
-            <div class="bottonechiudi" onclick="Chiudifinestra()">✕</div>
+            <div class="bottoni" onclick="apriImp()"><img src="c:\Users\4ainfgr8\Downloads\icons8-impostazioni-24.png" alt="Impostazioni"></div>
+            <div class="bottoni" onclick="Chiudifinestra()">✕</div>
         </div>
 
         <div class="contenutomenu">
-            <h1><span class="titolonero">No</span><span class="titoloarancio">mi</span></h1>
+            <h1><span class="titolonero">Nomi</span><span class="titoloarancio"> Players</span></h1>
 
             <div class="scatolacontenitore" id="listagiocatori">
                 <div class="titolonomi">Inserisci Nomi Giocatori</div>
@@ -49,14 +55,82 @@
             </div>
             <div class="spaziobottoni">
                 <button class="bottoneavvio" onclick="tornaindietro()">INDIETRO</button>
-                <button class="bottoneavvio">GIOCA!</button>
+                <button class="bottoneavvio" onclick="GiocaAvanti()">GIOCA!</button>
 
             </div>
         </div>
         </div>
-        <div id="schermata-gioco">
+        <div id="finestra-gioco" class="nascosto">
+            
+            <div class="sole"></div>
+
+            <div class="barrasuperiore">
+
+                <div class="bottoni" onclick="apriImp()"><img src="c:\Users\4ainfgr8\Downloads\icons8-impostazioni-24.png" alt="Impostazioni"></div>
+                <div class="bottoni" onclick="Chiudifinestra()">✕</div>
+
+            </div>
+
             <div class="contenitore-gioco">
-                
+                <header class="intestazione-partita">
+                    <h1><span class="titolonero">Oca</span><span class="titoloarancio">Play</span></h1>
+                </header>
+                <main class="mappa">
+                    <div id="campo-tabellone">
+                        <div class="parent">
+                            <div class="div1">1</div>
+                            <div class="div2">2</div>
+                            <div class="div3">3</div>
+                            <div class="div4">4</div>
+                            <div class="div5">5</div>
+                            <div class="div6">6</div>
+                            <div class="div7">7</div>
+                            <div class="div8">8</div>
+                            <div class="div9">9</div>
+                            <div class="div10">10</div>
+                            <div class="div11">11</div>
+                            <div class="div12">12</div>
+                            <div class="div13">13</div>
+                            <div class="div14">14</div>
+                            <div class="div15">15</div>
+                            <div class="div16">16</div>
+                            <div class="div17">17</div>
+                            <div class="div18">18</div>
+                            <div class="div19">19</div>
+                            <div class="div20">20</div>
+                            <div class="div21">21</div>
+                            <div class="div22">22</div>
+                            <div class="div23">23</div>
+                            <div class="div24">24</div>
+                            <div class="div25">25</div>
+                            <div class="div26">26</div>
+                            <div class="div27">27</div>
+                            <div class="div28">28</div>
+                            <div class="div29">29</div>
+                            <div class="div30">30</div>
+                            <div class="div31">31</div>
+                            <div class="div32">32</div>
+                            <div class="div33">33</div>
+                            <div class="div34">34</div>
+                            <div class="div35">35</div>
+                            <div class="div36">36</div>
+                            <div class="div37">37</div>
+                            <div class="div38">38</div>
+                            <div class="div39">39</div>
+                            <div class="div40">40</div>
+                            <div class="div41">41</div>
+                            <div class="div42">42</div>
+                            <div class="div43">43</div>
+                            <div class="div44">44</div>
+                            <div class="div45">45</div>
+                            <div class="div46">46</div>
+                            <div class="div47">47</div>
+                            <div class="div48">48</div>
+                            <div class="div49">49</div>
+                            <div class="div50">50</div>
+                        </div>
+                    </div>
+                </main>
             </div>
         </div>
 
