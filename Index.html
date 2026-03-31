@@ -2,23 +2,20 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>OCAPLAY - Menu Selezione</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCAPLAY</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    
     <div id="finestra-menu">
-       
         <div class="sole"></div>
-       
         <div class="barrasuperiore">
-            <div class="bottonechiudi">✕</div>
+            <div class="bottonechiudi" onclick="Chiudifinestra()">✕</div>
         </div>
-
         <div class="contenutomenu">
             <h1><span class="titolonero">Oca</span><span class="titoloarancio">Play</span></h1>
-           
             <div class="scatolacontenitore">
                 <div class="testogiocatori">QUANTI GIOCATORI?</div>
                 <div class="selettoregiocatori">
@@ -27,113 +24,50 @@
                     <div class="bottonefreccia" onclick="aumentaGiocatori()">+</div>
                 </div>
             </div>
-            <button class="tastoavvio" onclick="gestisciAvanti()">Avanti</button>
-          </div>
-      </div>
-      <div id="finestra-nomi" class="nascosto">
-        
-        <div class="sole"></div>
-        
-        <div class="barrasuperiore">
-            <div class="bottonechiudi">✕</div>
+            <button class="tastoavvio" onclick="gestisciAvanti()">AVANTI</button>
         </div>
+    </div>
 
+    
+    <div id="finestra-nomi" class="nascosto">
+        <div class="sole"></div>
         <div class="contenutomenu">
-            <div class="scatolacontenitore" id="listagiocatori">
-                <div class="titolonomi">Inserisci Nomi Giocatori</div>
+            <h1><span class="titolonero">Oca</span><span class="titoloarancio">Play</span></h1>
+            <div class="scatolacontenitore">
+                <div class="titolonomi">Inserisci Nomi</div>
                 <div id="listainput"></div>
             </div>
             <div class="spaziobottoni">
-                <button class="bottoneavvio">INDIETRO</button>
-                <button class="bottoneavvio">GIOCA!</button>
-
+                <button class="bottoneavvio" onclick="tornaindietro()">INDIETRO</button>
+                <button class="bottoneavvio" onclick="GiocaAvanti()">GIOCA!</button>
             </div>
         </div>
     </div>
-    
-    <div id= "schermo-gioco" class="nascosto">
-        <div class = "contenitore-gioco">
+
+    <div id="schermo-gioco" class="nascosto">
+        <div class="contenitore-gioco">
             <header style="text-align: center; height: 30px;">
                 <h1 style="font-size: 1.2rem; margin: 0;"><span class="titolonero">Oca</span><span class="titoloarancio">Play</span></h1>
             </header>
             <main class="area-mappa">
-                <div id="campo-gioco">            
-<div class="parent">
-    <div class="div1">1</div>
-    <div class="div2">2</div>
-    <div class="div3">3</div>
-    <div class="div4">4</div>
-    <div class="div5">5</div>
-    <div class="div6">6</div>
-    <div class="div7">7</div>
-    <div class="div8">8</div>
-    <div class="div9">9</div>
-    <div class="div10">10</div>
-    <div class="div11">11</div>
-    <div class="div12">12</div>
-    <div class="div13">13</div>
-    <div class="div14">14</div>
-    <div class="div15">15</div>
-    <div class="div16">16</div>
-    <div class="div17">17</div>
-    <div class="div18">18</div>
-    <div class="div19">19</div>
-    <div class="div20">20</div>
-    <div class="div21">21</div>
-    <div class="div22">22</div>
-    <div class="div23">23</div>
-    <div class="div24">24</div>
-    <div class="div25">25</div>
-    <div class="div26">26</div>
-    <div class="div27">27</div>
-    <div class="div28">28</div>
-    <div class="div29">29</div>
-    <div class="div30">30</div>
-    <div class="div31">31</div>
-    <div class="div32">32</div>
-    <div class="div33">33</div>
-    <div class="div34">34</div>
-    <div class="div35">35</div>
-    <div class="div36">36</div>
-    <div class="div37">37</div>
-    <div class="div38">38</div>
-    <div class="div39">39</div>
-    <div class="div40">40</div>
-    <div class="div41">41</div>
-    <div class="div42">42</div>
-    <div class="div43">43</div>
-    <div class="div44">44</div>
-    <div class="div45">45</div>
-    <div class="div46">46</div>
-    <div class="div47">47</div>
-    <div class="div48">48</div>
-    <div class="div49">49</div>
-    <div class="div50">50</div>
-</div>
-            </div>
+                <div id="campo-gioco" class="parent">
+                    
+                </div>
             </main>
-            <footer class="controlli-gioco">
-                <div class="scatola-info" id="scatola-turno">
+            <footer class="controlli-gioco" style="display:flex; gap:10px; height:80px; margin-top:10px;">
+                <div class="scatola-info" style="flex:1; background:white; border:2px solid #333; border-radius:8px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
                     <span class="etichetta">Turno</span>
-                    <div id="testo-stato">...</div>
+                    <div id="testo-stato" style="font-weight:bold">...</div>
                 </div>
-                <div class="scatola-info">
+                <div class="scatola-info" style="flex:1; background:white; border:2px solid #333; border-radius:8px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
                     <span class="etichetta">Dado</span>
-                    <div class="area-dado">
-                        <svg id="svg-dado" viewBox="0 0 100 100">
-                            <rect x="5" y="5" width="90" height="90" rx="15" fill="white" stroke="black" stroke-width="5"/>
-                            <g id="punti-dado"></g>
-                        </svg>
-                        <div id="testo-risultato">-</div>
-                    </div>
+                    <div id="testo-risultato" style="font-weight:bold; font-size:1.5rem">-</div>
                 </div>
-                <button class="scatola-info btn-lancio" id="btn-lancio" onclick="gestisciLancio()">TIRA!</button>
+                <button class="btn-lancio" style="flex:1; border-radius:8px; font-size:1.2rem" onclick="gestisciLancio()">TIRA!</button>
             </footer>
         </div>
     </div>
 
-
-  
-      <script src="Script.js"></script>
-  </body>
-  </html>
+    <script src="script.js"></script>
+</body>
+</html>
