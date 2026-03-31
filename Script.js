@@ -39,4 +39,13 @@ function GiocaAvanti(){
 }
 function apriImp(){
     document.getElementById('impostazioni').classList.remove('nascosto');
+    document.getElementById('finestra-nomi').classList.add('nascosto');
+}
+function tornaindietroimp(){
+    document.getElementById('impostazioni').classList.add('nascosto');
+    document.getElementById('finestra-nomi').classList.remove('nascosto');
+}
+function apriImpPartita(){
+    document.getElementById('impostazioni').classList.remove('nascosto');
+    document.getElementById('finestra-gioco').classList.add('nascosto');
 }

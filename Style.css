@@ -37,6 +37,8 @@ body {
 }
 .barrasuperiore{
     display: flex;
+    top: 20px;
+    right: 20px;
     justify-content: flex-end;
     padding: 5px;
     z-index: 20;
@@ -173,6 +175,12 @@ h1 {
     top: 0;
     left: 0;
 }
+.impo{
+    width: 50vw;
+    height: 50vh;
+    background:rgba(255, 255, 255, 0.7);
+    
+}
 #listainput{
     flex-direction:column;
     display: flex;
@@ -206,6 +214,8 @@ h1 {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(10, 1fr);
     gap: 0px;
+    width: 100%;
+    height: 100%;
    
 }
 .parent div {
@@ -335,4 +345,76 @@ h1 {
     grid-column-start: 1;
     grid-row-start: 10;
 }
-        
+.regole-container {
+    flex-grow: 1;
+    border: 4px solid #000;
+    padding: 25px;
+    background-color: #fff;
+}
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin: 5px 0;
+}
+
+li {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+.sezione-regole {
+    margin-bottom: 15px;
+}
+
+.titolo-sezione {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 2px 8px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+.nuvola {
+    width: 100px;
+    height: 30px;
+    background: #fff;
+    border: 2px  rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 50px;
+    left: -150px;
+    z-index: 1;
+    filter: blur(1px);
+    opacity: 0.9;
+    
+    animation: muoviNuvola 30s linear infinite;
+}
+.nuvola ::after{
+    background: #fff;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: -25px;
+    left: 15px;
+    border-bottom: none;
+}
+.nuvola ::before{
+    background: #fff;
+    position: absolute;
+    width: 60px;
+    height: 70px;
+    border-radius: 50%;
+    top: -15px;
+    right: 10px;
+    border-bottom: none;
+}
+@keyframes muoviNuvola {
+    from {
+        left: -150px;
+    }
+    to {
+        left: 100%;
+}
+}

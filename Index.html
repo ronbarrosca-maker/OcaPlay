@@ -9,11 +9,11 @@
 <body>
 
     <div id="finestra-menu">
-       
+        <div class="nuvola"></div>
+        <div class="nuvola2"></div>
         <div class="sole"></div>
        
         <div class="barrasuperiore">
-            <div class="bottoni" onclick="apriImp()"><img src="c:\Users\4ainfgr8\Downloads\icons8-impostazioni-24.png" alt="Impostazioni"></div>
             <div class="bottoni" onclick="Chiudifinestra()">✕</div>
         </div>
 
@@ -32,9 +32,50 @@
           </div>
       </div>
       
-      <div id="impostazioni" class="nascosto">
+      <div id="impostazioni" class="nascosto" class="impo">
+        <div class="barrasuperiore">
+            <div class="bottoni" onclick="tornaindietroimp()"><img src=c:\Users\4ainfgr8\Downloads\icons8-ritorno-48.png alt="frecciaindietro" style="width: 30px;height: 30px;"></div>
+            <div class="bottoni" onclick="Chiudifinestra()">✕</div>
+        </div>
+        
+        <div class="sole"></div>
+        <div class="contenutomenu">
+            <h1>Regole Di Gioco</h1>
+            <div class="scatolacontenitore">
+                <main class="regole-container">
+                    <h2>Regole delle Caselle Speciali</h2>
+        
+                    <div class="sezione-regole">
+                        <span class="titolo-sezione">1. Bonus di Avanzamento e Replay</span>
+                        <ul>
+                            <li><strong>Avanzamento Rapido:</strong> +2 caselle extra.</li>
+                            <li><strong>Lancio Supplementare:</strong> Tira di nuovo i dadi.</li>
+                            <li><strong>Moltiplicatore:</strong> Raddoppia l'ultimo valore ottenuto.</li>
+                        </ul>
+                    </div>
+        
+                    <div class="sezione-regole">
+                        <span class="titolo-sezione">2. Penalità di Arretramento</span>
+                        <ul>
+                            <li><strong>Retrocessione:</strong> Torna indietro di 2 caselle.</li>
+                            <li><strong>Ritorno alla Partenza:</strong> Torna alla Casella 1.</li>
+                        </ul>
+                    </div>
+        
+                    <div class="sezione-regole">
+                        <span class="titolo-sezione">3. Restrizioni e Fermi di Gioco</span>
+                        <ul>
+                            <li><strong>Sosta Forzata:</strong> Salta 1 turno.</li>
+                            <li><strong>Blocco ad Oltranza:</strong> Fermo fino a quando non ottieni 6.</li>
+                        </ul>
+                    </div>
+                </main>
+            </div>
 
-      </div>
+        </div>
+
+      
+    </div>
 
 
       <div id="finestra-nomi" class="nascosto">
@@ -66,7 +107,7 @@
 
             <div class="barrasuperiore">
 
-                <div class="bottoni" onclick="apriImp()"><img src="c:\Users\4ainfgr8\Downloads\icons8-impostazioni-24.png" alt="Impostazioni"></div>
+                <div class="bottoni" onclick="apriImpPartita()"><img src="c:\Users\4ainfgr8\Downloads\icons8-impostazioni-24.png" alt="Impostazioni"></div>
                 <div class="bottoni" onclick="Chiudifinestra()">✕</div>
 
             </div>
