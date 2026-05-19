@@ -62,54 +62,95 @@ function Chiudifinestra(){
     if(confirm("Vuoi chiudere il gioco?")) window.close();
 }
 
-// --- LOGICA GIOCO ---
+// --- LOGICA GIOCO (MOVIMENTO ANIMATO PASSO-PASSO) ---
 function generaMappa() {
     const campo = document.getElementById('campo-gioco');
     campo.innerHTML = ''; 
+    
     for (let i = 1; i <= totaleCaselle; i++) {
-        const div = document.createElement('div');
-        div.innerText = i;
-        div.className = "div" + i; 
-        campo.appendChild(div);
+        const divCasella = document.createElement('div');
+        divCasella.className = "div" + i; 
+        divCasella.id = `casella-${i}`;   
+        
+        const numeroTesto = document.createElement('span');
+        numeroTesto.innerText = i;
+        numeroTesto.style.fontSize = "0.75rem";
+        numeroTesto.style.color = "#333";
+        numeroTesto.style.position = "absolute";
+        numeroTesto.style.top = "2px";
+        numeroTesto.style.left = "4px";
+        
+        divCasella.appendChild(numeroTesto);
+        campo.appendChild(divCasella);
     }
-    disegnaPedine();
+    disegnaPedine(false);
 }
 
-function disegnaPedine() {
+function disegnaPedine(staCamminando) {
     document.querySelectorAll('.pedina').forEach(p => p.remove());
-    giocatoriData.forEach((g, index) => {
-        const casella = document.querySelector('.div' + g.pos);
-        if (casella) {
+    
+    giocatoriData.forEach((g, i) => {
+        const contenitoreCasella = document.getElementById(`casella-${g.pos}`);
+        if (contenitoreCasella) {
             const pEl = document.createElement('div');
             pEl.className = 'pedina';
             pEl.style.backgroundColor = g.colore;
-            // Spostamento se sulla stessa casella
-            pEl.style.marginLeft = (index * 4) + "px"; 
-            casella.appendChild(pEl);
-        }
-        if (g.pos = 13) {
-            g.pos = g.pos - 3; 
+            pEl.title = g.nome; 
+            
+            // Attiva l'animazione del salto solo se è il giocatore corrente ed è in movimento
+            if (i === turno && staCamminando) {
+                pEl.classList.add('salto');
+            }
+            
+            contenitoreCasella.appendChild(pEl);
         }
     });
 }
 
 function gestisciLancio() {
+    const bottoneTira = document.querySelector('.btn-lancio');
+    bottoneTira.disabled = true; // Blocca il tasto durante la camminata
+
     let dado = Math.floor(Math.random() * 6) + 1;
     document.getElementById('testo-risultato').innerText = dado;
 
     let p = giocatoriData[turno];
-    p.pos += dado;
+    let passiMancanti = dado;
+    let direzioneInAvanti = true;
 
-    if (p.pos >= totaleCaselle) {
-        p.pos = totaleCaselle;
-        disegnaPedine();
-        setTimeout(() => { alert("Vince " + p.nome + "!"); location.reload(); }, 300);
-        return;
-    }
+    // Funzione intervallo per far avanzare la pedina una casella alla volta
+    let muoviPasso = setInterval(() => {
+        if (passiMancanti > 0) {
+            if (direzioneInAvanti) {
+                if (p.pos < totaleCaselle) {
+                    p.pos++;
+                } else {
+                    // Rimbalzo se tocca il fondo
+                    direzioneInAvanti = false;
+                    p.pos--;
+                }
+            } else {
+                p.pos--;
+            }
+            
+            passiMancanti--;
+            disegnaPedine(true); // Aggiorna graficamente attivando il saltello
+        } else {
+            clearInterval(muoviPasso); // Fine movimento del dado
+            disegnaPedine(false); // Ferma il saltello quando si ferma sulla casella finale
+            
+            // Controllo della vittoria
+            if (p.pos === totaleCaselle) {
+                setTimeout(() => { alert("Vince " + p.nome + "!"); location.reload(); }, 300);
+                return;
+            }
 
-    disegnaPedine();
-    turno = (turno + 1) % giocatoriData.length;
-    aggiornaTurnoUI();
+            // Cambia turno e sblocca il pulsante
+            turno = (turno + 1) % giocatoriData.length;
+            aggiornaTurnoUI();
+            bottoneTira.disabled = false;
+        }
+    }, 400); // 400 millisecondi di pausa tra ogni casella
 }
 
 function aggiornaTurnoUI() {
@@ -118,5 +159,3 @@ function aggiornaTurnoUI() {
     stato.innerText = p.nome;
     stato.style.color = p.colore;
 }
-
-

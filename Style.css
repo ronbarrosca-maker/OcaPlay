@@ -10,19 +10,20 @@ body {
     justify-content: center; 
     align-items: center; 
     overflow: hidden;
-    
 }
-#finestra-menu{
+
+#finestra-menu, #finestra-nomi, #schermo-gioco {
     background: #a3d2ff;
     width: 100vw;
     height: 100vh;
     display: flex;
     overflow: hidden;
-    flex-direction:column;
+    flex-direction: column;
     position: absolute;
     top: 0;
     left: 0;
 }
+
 .sole {
     position: absolute;
     top: 20px;
@@ -34,16 +35,18 @@ body {
     box-shadow: 0 0 30px orange;
     z-index: 2;
 }
-.barrasuperiore{
+
+.barrasuperiore {
     display: flex;
     justify-content: flex-end;
     padding: 5px;
     z-index: 20;
 }
-.bottonechiudi{
+
+.bottonechiudi {
     display: flex;
     color: black;
-    font-family: 'Brush Script MT';
+    font-family: 'Brush Script MT', cursive;
     width: 40px;
     height: 40px;
     border-radius: 50px;
@@ -52,7 +55,8 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
 }
-.contenutomenu{
+
+.contenutomenu {
     flex-grow: 1;
     flex-direction: column;
     display: flex;
@@ -61,19 +65,18 @@ body {
     padding: 15px;
     z-index: 5;
 }
+
 h1 {
     font-family: 'Brush Script MT', cursive;
     font-size: clamp(2.5rem, 8vw, 4.5rem);
     margin: 0 0 15px 0;
     text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
 }
-.titolonero{
-    color: black;
-}
-.titoloarancio{
-    color: orange;
-}
-.scatolacontenitore{
+
+.titolonero { color: black; }
+.titoloarancio { color: orange; }
+
+.scatolacontenitore {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,29 +90,33 @@ h1 {
     width: 90%;
     max-width: 400px;
 }
-.testogiocatori{
+
+.testogiocatori {
     font-weight: bold;
-     color:black;
-     font-size: 0.9rem;
+    color: black;
+    font-size: 0.9rem;
 }
-.bottonefreccia{
+
+.bottonefreccia {
     font-size: 2.5rem; 
     cursor: pointer; 
     font-weight: bold; 
     user-select: none;
     color: #333;
 }
-.selettoregiocatori{
+
+.selettoregiocatori {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     margin: 10px 0;
 }
-.boxnumero{
+
+.boxnumero {
     width: 70px;
     height: 55px;
-    border: 5px  solid black;
+    border: 5px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,9 +124,9 @@ h1 {
     font-weight: bold;
     background: white;
     border-radius: 10px;
-
 }
-.tastoavvio{
+
+.tastoavvio, .bottoneavvio {
     margin-top: 20px;
     background: black;
     color: orange;
@@ -132,65 +139,42 @@ h1 {
     font-size: 1.2rem;
     border: none;
 }
-.tastoavvio:active {
+
+.tastoavvio:active, .bottoneavvio:active {
     transform: translateY(2px);
     box-shadow: 0 2px 0px #333;
 }
-.nascosto{
+
+.btn-lancio:disabled {
+    background: #ccc !important;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.nascosto {
     display: none !important;
 }
+
 .titolonomi {
     margin-top: 0;
     font-size: 1.5rem;
     color: black;
     font-weight: bold;
 }
-.spaziobottoni{
+
+.spaziobottoni {
     gap: 10px;
     display: flex;
 }
-.bottoneavvio{
-    margin-top: 20px;
-    background: black;
-    color: orange;
-    width: 220px;
-    padding: 15px;
-    border-radius: 50px;
-    box-shadow: 0 4px 0px #333;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2rem;
-    border: none;
-}
-#finestra-nomi{
-    background: #a3d2ff;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    overflow: hidden;
-    flex-direction:column;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-#listainput{
+
+#listainput {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
+    width: 100%;
 }
-#schermo-gioco{
-    background: #a3d2ff;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    overflow: hidden;
-    flex-direction:column;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.contenitore-gioco{
+
+.contenitore-gioco {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -198,23 +182,25 @@ h1 {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    
 }
-.area-mappa{
+
+.area-mappa {
     flex-grow: 1;
-    border:3px solid #333;
+    border: 3px solid #333;
     margin: 5px 0;
     position: relative;
     background-color: #fdf0d5;
     border-radius: 12px;
     overflow: hidden;
 }
-#campo-gioco{
+
+#campo-gioco {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
+/* --- MAPPA GENERALE GRID --- */
 .parent {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -227,13 +213,12 @@ h1 {
     border: 1px solid #333;
     background: white;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-weight: bold;
-    font-size: 0.8rem;
+    align-items: center;
     position: relative;
-    min-height: 40px;
+    gap: 2px;
 }
+
 .div6 { grid-column: 5; grid-row: 9; } .div7 { grid-column: 4; grid-row: 9; } 
 .div8 { grid-column: 3; grid-row: 9; } .div9 { grid-column: 2; grid-row: 9; } .div10 { grid-column: 1; grid-row: 9; }
 
@@ -258,20 +243,40 @@ h1 {
 .div1 { background: #ee9b00 !important; color: white; } 
 .div50 { background: #000 !important; color: white; }    
 
+/* --- AUTENTICA PEDINA A SAGOMA DI BIRILLO LUDO 3D --- */
 .pedina {
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    border: 2px solid white;
-    position: absolute;
-    bottom: 2px;
-    transition: all 0.3s ease;
+    width: 16px;
+    height: 24px;
+    position: relative;
     z-index: 5;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    display: inline-block;
+    filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.4));
+    transition: all 0.15s ease-out;
+
+    /* Taglio geometrico perfetto del birillo da gioco */
+    clip-path: polygon(
+        35% 0%, 65% 0%, 85% 15%, 85% 35%, 65% 50%, 
+        60% 55%, 75% 65%, 
+        90% 90%, 100% 100%, 0% 100%, 10% 90%, 
+        25% 65%, 40% 55%, 35% 50%, 15% 35%, 15% 15%
+    );
+    
+    /* Effetto riflesso lucido sferico sulla plastica */
+    background-image: radial-gradient(circle at 35% 25%, rgba(255,255,255,0.6) 0%, rgba(0,0,0,0.3) 100%);
+    background-blend-mode: overlay;
+}
+
+/* --- ANIMAZIONE SALTO SOLO DURANTE IL PASSO --- */
+.salto {
+    animation: effettosalto 0.3s infinite alternate ease-in-out;
+}
+
+@keyframes effettosalto {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(-10px) scale(1.1); } /* Salta vistosamente durante la camminata */
 }
 
 .area-dado { display: flex; align-items: center; gap: 5px; }
 #svg-dado { width: 30px; height: 30px; }
 .btn-lancio { background: #ee9b00; cursor: pointer; font-weight: bold; border: 2px solid #000; }
 .etichetta { font-size: 0.7rem; display: block; color: #666; }
-    
